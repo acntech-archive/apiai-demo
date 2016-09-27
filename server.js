@@ -15,15 +15,15 @@ app.post('/webhook', function(req, res) {
   var parameters = req.body.result.parameters;
   
   console.log("Got request: " + JSON.stringify(req.body));
-
+  
   switch(intent) {
     case "information":
         res.send(getInformation(parameters));
         break;
     default:
-        res.sendStatus(500);
+        res.status(500).send();
   }
-  res.sendStatus(500);
+  res.status(500).send();
 });
 
 
@@ -41,7 +41,7 @@ function getInformation(parameters) {
   var text = "";
 
   var platform = parameters.platform;
-
+  
   if (platform) {
     switch(platform) {
       case "technology":
