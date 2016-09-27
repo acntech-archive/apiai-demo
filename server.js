@@ -40,7 +40,7 @@ server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
 function getInformation(parameters) {
   var text = "";
 
-  platform = parameters.platform;
+  var platform = parameters.platform;
 
   if (platform) {
     switch(platform) {
@@ -51,7 +51,7 @@ function getInformation(parameters) {
         text = "Accenture Digital provides digital marketing, analytics and mobility services.";
         break;
       case "operations":
-        text = "Accenture Operations focuses on an "as-a-service" model of service delivery. This includes business process outsourcing, IT services, cloud services, managed operations, security and infrastructure services.";
+        text = "Accenture Operations focuses on an \"as-a-service\" model of service delivery. This includes business process outsourcing, IT services, cloud services, managed operations, security and infrastructure services.";
         break;
       case "strategy":
         text = "Accenture Strategy provides business strategy, technology strategy and operations strategy services.";
@@ -71,4 +71,6 @@ function getInformation(parameters) {
     "displayText": text,
     "source": "API.ai bot backend"
   }
+  
+  return response;
 }
