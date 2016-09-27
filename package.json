@@ -1,5 +1,5 @@
 {
-  "name": "api.ai demo backend application",
+  "name": "apiai-demo-backend",
   "version": "0.0.0",
   "description": "A backend for an API.ai demo",
   "main": "server.js",
