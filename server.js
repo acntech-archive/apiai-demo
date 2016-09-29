@@ -11,7 +11,7 @@ var server = http.createServer(app);
 app.use(bodyParser.json())
 
 app.post('/webhook', function(req, res) {
-  res.sendStatus(200);
+  res.status(200).send();
 });
 
 app.get('/', function(req, res) {
